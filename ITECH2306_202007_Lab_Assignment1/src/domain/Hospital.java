@@ -1,7 +1,7 @@
 package domain;
 
 /**
- * @author amrit
+ * @author jatin
  * @version 1.0
  * @created 05/04/2020
  */
