@@ -1,17 +1,29 @@
 package domain;
 
 /**
- * @author Takeogh
+ * @author Amritpal kaur Ramana
  * @version 1.0
- * @created 02-Apr-2020 8:30:00am
+ * @created 09/05/2020
  */
 public class VacantLand extends Property{
 
 	private String[] overlays;
+	
+	private static final double CIV_RATE = 0.002;
+	private static final double FIRE_SERVICES_BASE = 110;
+	private static final double FIRE_SERVICES_PERCENT = 0.00006;
 
+	private ServiceType fireServicesLevy;
+	
 	public VacantLand() {
-		System.out.println("Not implemented yet");
+		super();
+		overlays = null;
+		fireServicesLevy = null;
+		setCapitalImprovedRate(CIV_RATE);
 	}
+	
+	
+	
 	public String[] getOverlays() {
 		return overlays;
 	}
@@ -20,12 +32,15 @@ public class VacantLand extends Property{
 	}
 	@Override
 	public double calculateExtraServices() {
-		// TODO Auto-generated method stub
-		return 0;
+		return  fireServicesLevy.calculateChargeForServiceType();
 	}
 	@Override
 	public void setUpExtraServices() {
-		// TODO Auto-generated method stub
+		fireServicesLevy = new BaseAndPercentageOfValueService("Fire Levy",
+				FIRE_SERVICES_BASE,
+				FIRE_SERVICES_PERCENT,
+				getCapitalImprovedValue());
+
 		
 	}
 
