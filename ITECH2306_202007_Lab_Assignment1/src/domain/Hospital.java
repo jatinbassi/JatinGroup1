@@ -1,7 +1,7 @@
 package domain;
 
 /**
- * @author Amritpal kaur Ramana
+ * @author Amritpal kaur ramana
  * @version 1.0
  * @created 04/05/2020
  */
