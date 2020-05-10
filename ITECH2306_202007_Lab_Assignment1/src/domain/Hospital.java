@@ -12,7 +12,7 @@ public class Hospital  extends Property{
 	private int numberOfFloors;
 	
 	private static final double CIV_RATE = 0.0035;
-	private static final int INDUSTRIAL_WASTE_DISPOSAL_UNITS = 4;
+	private static final int INDUSTRIAL_WASTE_DISPOSAL_UNITS = 4; 
 	private static final double INDUSTRIAL_WASTE_DISPOSAL_FEES = 500.00;
 	private static final double FIRE_SERVICES_BASE = 200;
 	private static final double FIRE_SERVICES_PERCENT = 0.00006;
