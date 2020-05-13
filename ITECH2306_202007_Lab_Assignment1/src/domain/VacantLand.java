@@ -36,7 +36,7 @@ public class VacantLand extends Property{
 	}
 	@Override
 	public void setUpExtraServices() {
-		fireServicesLevy = new BaseAndPercentageOfValueService("Fire Levy",
+		fireServicesLevy = new BaseAndPercentageOfValueService("Fires Levy",
 				FIRE_SERVICES_BASE,
 				FIRE_SERVICES_PERCENT,
 				getCapitalImprovedValue());
