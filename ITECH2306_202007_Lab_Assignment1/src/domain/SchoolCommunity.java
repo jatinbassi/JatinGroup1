@@ -14,7 +14,7 @@ public class SchoolCommunity {
 	
 	    private static final double CIV_RATE = 0.0025;
 		private static final int INDUSTRIAL_WASTE_DISPOSAL_UNITS = 2;
-		private static final int FIRE_SEVICES_LEVY  = 200;
+		private static final int FIRE_SEVICES_LEVY  = 100;
 		private static final int TRAFFIC_MANAGEMENT_LEVY= 200;
 		private static final double TRAFFIC_MANAGEMENT_LEVY_SMALL_ORGANISATION = 60;
 		private static final double TRAFFIC_MANAGEMENT_LEVY_MEDIUM_ORGANISATION = 80;
