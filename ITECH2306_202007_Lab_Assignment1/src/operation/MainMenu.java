@@ -3,9 +3,10 @@ package operation;
 import java.util.Scanner;
 
 /**
- * @author Takeogh
+ * @author Amritpal kaur ramana
  * @version 1.0
- * @created 02-Apr-2020 8:30:00am
+ * 
+ * @created 20 may, 2020
  */
 public class MainMenu {
 	private Scanner console;
@@ -71,10 +72,13 @@ public class MainMenu {
 		{
 			case 1:
 				fd = new AddRatePayer(console); // we pass the console as a compromise; we want to avoid system resource issues in Eclipse
+				fd.obtainInput(1);
+				fd.respondToInput();
 				break;
 			case 2:
 				fd = new AddProperty(console);
 				break;
+				
 			case 3:
 				fd = new CalculatePropertyTypeRates(console);
 				break;
@@ -94,3 +98,4 @@ public class MainMenu {
 	}
 
 }
+
