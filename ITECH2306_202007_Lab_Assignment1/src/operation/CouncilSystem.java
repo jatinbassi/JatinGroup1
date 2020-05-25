@@ -1,9 +1,10 @@
 package operation;
 
 /**
- * @author Takeogh
+ * @author Amritpal kaur ramana
  * @version 1.0
- * @created 02-Apr-2020 8:30:00am
+ * 
+ * @created 20 may, 2020
  */
 public class CouncilSystem {
 
