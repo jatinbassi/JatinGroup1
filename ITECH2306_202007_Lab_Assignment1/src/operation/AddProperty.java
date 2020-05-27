@@ -55,7 +55,7 @@ String unit,address,area,siteValue,capitalImprovedValue,capitalImprovedRate,netA
 		addproperty.setCapitalImprovedRate(capitalImprovedRate);
 		addproperty.setNetAnnualValue(netAnnualValue);
 		addproperty.setValuationDate(valuationDate);
-		propertydata.insert(ratePayer);
+		propertydata.insert(AddProperty);
 		setStillRunning(false);
 	}
 
