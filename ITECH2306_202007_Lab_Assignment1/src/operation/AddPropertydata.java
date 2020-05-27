@@ -1,43 +1,43 @@
 package operation;
 import java.util.*;
-import domain.RatePayer;
+import domain.AddProperty;
 import java.io.*;
 /**
- * @author Amritpal kaur ramana
+ * @author Jatin Bassi
  * @version 1.0
  
  * @created 20 may, 2020
  */
 
-public class RatePayerData {
+public class AddPropertyData {
 	
-	private ArrayList<RatePayer> ratePayers;
-	public RatePayerData()
+	private ArrayList<AddProperty> AddProperties;
+	public AddPropertyData()
 	{
-		ratePayers = new ArrayList<RatePayer>();
+		AddProperties = new ArrayList<AddProperty>();
 	}
-	public void insert(RatePayer _payer)
+	public void insert(AddProperty _property)
 	{
-		ratePayers.add(_payer);
+		AddProperties.add(_property);
 	}
 	
 	public int getSize()
 	{
-		return ratePayers.size();
+		return AddProperties.size();
 	}
 	public String toString()
 	{
 		String result="";
-		for(RatePayer ratePayer: ratePayers)
+		for(AddProperty AddProperty: AddProperties)
 		{
-			result += "\n"+ratePayer.toString();
+			result += "\n"+AddProperty.toString();
 		}
 		return result;
 	}
 	public void writeToFile()
 	{
-		File file = new File("C:\\Users\\RS\\git\\JatinGroup1\\LabAssignment 1 Test\\src\\files\\ITECH2306_2020_Load_RatePayers.txt");
-		//File file = new File("ITECH2306_2020_Load_RatePayers.txt");
+		File file = new File("C:\\Users\\Jatin\\git\\JatinGroup11\\ITECH2306_202007_Lab_Assignment1\\src\\files\\ITECH2306_2020_Load_Properties1.txt");
+		//File file = new File("ITECH2306_2020_Load_Properties1.txt");
 		
 		FileOutputStream fos = null;
 		PrintStream outFile = null;
@@ -45,9 +45,9 @@ public class RatePayerData {
 		try {
 			fos = new FileOutputStream(file);
 			outFile = new PrintStream(fos);
-			for(RatePayer payer: ratePayers)
+			for(AddProperty property: AddProperties)
 			{
-				outFile.println(payer.getName()+","+payer.getAddress()+","+payer.getPostcode()+","+payer.getPhone()+","+ payer.getType()+",false");
+				outFile.println(property.getunit()+","+property.getaddress()+","+property.getarea()+","+property.getsiteValue()+","+ property.getcapitalImprovedValue()+","+ property.getcapitalImprovedRate()","+ property.getnetAnnualValue()","+ property.getvaluationDate()+",false");
 			}
 		}
 		catch(Exception ex)
@@ -61,19 +61,22 @@ public class RatePayerData {
 		
 		try
 		{
-			File file = new File("C:\\Users\\RS\\git\\JatinGroup1\\LabAssignment 1 Test\\src\\files\\ITECH2306_2020_Load_RatePayers.txt");
-			//File file = new File("ITECH2306_2020_Load_RatePayers.txt");
+			File file = new File("C:\\Users\\Jatin\\git\\JatinGroup11\\ITECH2306_202007_Lab_Assignment1\\src\\files\\ITECH2306_2020_Load_Properties1.txt");
+			//File file = new File("ITECH2306_2020_Load_Properties1.txt");
 			Scanner input = new Scanner(file);
 			while(input.hasNext()) {
 				String line = input.nextLine();
 				String values[] = line.split(",");
-				RatePayer payer = new RatePayer();
-				payer.setName(values[0]);
+				AddProperty property = new AddProperty();
+				payer.setunit(values[0]);
 				payer.setAddress(values[1]);
-				payer.setPostcode(values[2]);
-				payer.setPhone(values[3]);
-				payer.setType(values[4]);
-				ratePayers.add(payer);
+				payer.setarea(values[2]);
+				payer.setsiteValue(values[3]);
+				payer.setcapitalImprovedValue(values[4]);
+				payer.setcapitalImprovedRate(values[5]);
+				payer.setnetAnnualValue(values[6]);
+				payer.setvaluationDate(values[7]);
+				AddProperties.add(property);
 			}
 			file = null;
 		}
