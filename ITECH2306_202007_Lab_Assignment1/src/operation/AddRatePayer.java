@@ -11,6 +11,7 @@ import domain.RatePayer;
 /**
  * @author Amritpal kaur ramana
  * @version 1.0
+ 
  * @created 20 may, 2020
  */
 public class AddRatePayer extends FunctionalDialog {
