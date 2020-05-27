@@ -9,7 +9,7 @@ import java.util.Scanner;
 import domain.OtherProperty;
 import domain.Property;
 import domain.Residential;
-import domain.AddProperty;
+import operation.AddProperty;
 
 /**
  * @author jatin bassi
@@ -30,21 +30,21 @@ public class AddProperty extends FunctionalDialog {
 
 String unit,address,area,siteValue,capitalImprovedValue,capitalImprovedRate,netAnnualValue,valuationDate;
 		System.out.println("Enter units's name : ");
-		name = super.getScanner().nextLine();
+		units = super.get().nextLine();
 		System.out.println("Enter property's Address : ");
 		address = super.getScanner().nextLine();
 		System.out.println("Enter property area : ");
-		postcode = super.getScanner().nextLine();
+		area = super.getScanner().nextLine();
 		System.out.println("Enter property's siteValue : ");
-		phone = super.getScanner().nextLine();
+		siteValue = super.getScanner().nextLine();
 		System.out.println("Enter property's capitalImprovedValue : ");
-		type = super.getScanner().nextLine();
+		capitalImprovedValue = super.getScanner().nextLine();
 		System.out.println("Enter property's capitalImprovedRate : ");
-		type = super.getScanner().nextLine();
+		capitalImprovedRate = super.getScanner().nextLine();
 		System.out.println("Enter property's netAnnualValue : ");
-		type = super.getScanner().nextLine();
+		netAnnualValue = super.getScanner().nextLine();
 		System.out.println("Enter property's valuationDate : ");
-		type = super.getScanner().nextLine();
+		valuationDate = super.getScanner().nextLine();
 		
 		AddProperty addproperty = new AddProperty();
 		addproperty.setUnit(unit);
