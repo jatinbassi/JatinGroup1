@@ -18,7 +18,7 @@ import domain.AddProperty;
  */
 public class AddProperty extends FunctionalDialog {
 	
-	CalculatePropertyTypeRates propertydata;
+	AddPropertyData propertydata;
 	public AddProperty(Scanner console) {
 		super(1, console);
 		propertydata = new CalculatePropertyTypeRates();
