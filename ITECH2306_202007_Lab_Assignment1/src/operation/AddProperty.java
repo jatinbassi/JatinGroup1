@@ -30,7 +30,7 @@ public class AddProperty extends FunctionalDialog {
 
 String unit,address,area,siteValue,capitalImprovedValue,capitalImprovedRate,netAnnualValue,valuationDate;
 		System.out.println("Enter units's name : ");
-		units = super.get().nextLine();
+		units = super.getScanner().nextLine();
 		System.out.println("Enter property's Address : ");
 		address = super.getScanner().nextLine();
 		System.out.println("Enter property area : ");
